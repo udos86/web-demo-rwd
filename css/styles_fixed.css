@@ -1,0 +1,99 @@
+* {
+
+    color: #333;
+    margin: 0;
+    padding: 0;
+    font-family: "Open Sans", Helvetica, Arial, Verdana, sans-serif;
+    font-size: 100%;
+}
+
+#page {
+
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.45);
+    margin: 0 auto;
+    max-width: 960px;
+}
+
+#main {
+
+    box-shadow: 0 -2px 3px -1px rgba(0, 0, 0, 0.25);
+}
+
+header {
+
+    background-image: url(img/bg.jpg);
+    background-repeat: no-repeat;
+    height: 540px;
+}
+
+header nav {
+
+    background-color: rgba(255, 255, 255, 0.85); /* Alpha-Kanal für durchscheinenden Hintergrund */
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25); /* Alpha-Kanal für realistischen Schattenwurf */
+}
+
+header nav ul {
+
+    list-style-type: none;
+    text-align: right;
+}
+
+header nav ul li {
+
+    cursor: pointer;
+    display: inline-block;
+    font-weight: bold;
+    padding: 10px;
+    text-align: center;
+    text-transform: uppercase; /* Präsentation statt Content */
+    width: 128px;
+}
+
+header nav ul li:hover {
+
+    background-color: lightgrey;
+}
+
+header h1 {
+
+    font-size: 48px;
+    padding: 48px 24px;
+    padding: 0 48px;
+    position: relative;
+    top: 128px;
+}
+
+#main section {
+
+    padding: 48px 0;
+}
+
+.row {
+
+    overflow: hidden; /* Alternative, wenn overflow:hidden keine Option -> Clearfix-Element */
+}
+
+.row .column {
+
+    float: left;
+    padding: 0 10px;
+    text-align: center;
+    width: 300px;
+}
+
+.row .column h2 {
+
+    font-size: 24px;
+}
+
+.row .column img {
+
+    border-radius: 100px; /* Hälfte der Seitenlänge des quadratischen Photos */
+    margin: 32px 0;
+}
+
+.row .column p {
+
+    line-height: 1.5;
+	text-align: left;
+}

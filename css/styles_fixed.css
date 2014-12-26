@@ -21,7 +21,7 @@
 
 header {
 
-    background-image: url(img/bg.jpg);
+    background-image: url(/img/bg.jpg);
     background-repeat: no-repeat;
     height: 540px;
 }
@@ -88,7 +88,7 @@ header h1 {
 
 .row .column img {
 
-    border-radius: 100px; /* Hälfte der Seitenlänge des quadratischen Photos */
+    border-radius: 50%; /* 100px - Hälfte der Seitenlänge des quadratischen Photos */
     margin: 32px 0;
 }
 

@@ -21,8 +21,7 @@
 
 header {
 
-    background-image: url(/img/bg.jpg);
-    background-repeat: no-repeat;
+    background: url(../img/bg.jpg) no-repeat;
     height: 540px;
 }
 

@@ -28,8 +28,7 @@ img {
 header {
 
     /*background-attachment: fixed; /* Hintergrundbild scrollt nicht mit */
-    background-image: url(/img/bg.jpg);
-    background-repeat: no-repeat;
+    background: url(../img/bg.jpg) no-repeat;
     /*background-size: 100% 100% /* Flexible, aber verzerrte Skalierung des Hintergrundbilds */
     /*background-size: cover; /* Flexible Skalierung des Hintergrundbilds */
 }

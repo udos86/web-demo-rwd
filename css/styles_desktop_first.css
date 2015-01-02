@@ -31,6 +31,7 @@ header {
     background: url(../img/bg.jpg) no-repeat;
     /*background-size: 100% 100% /* Flexible, aber verzerrte Skalierung des Hintergrundbilds */
     /*background-size: cover; /* Flexible Skalierung des Hintergrundbilds */
+    height: 33.75rem;
 }
 
 header nav {
@@ -50,12 +51,16 @@ header nav ul {
     /*justify-content: flex-end; /* für Lösung C: Ausrichtung */
     /*overflow: hidden; /* für Lösung B zur horizontalen Anordnung der Listenelemente */
     /*text-align: center; /* Einfache Lösung zur Zentrierung der Listenelemente */
-    text-align: center;
+    text-align: right;
 }
 
 header nav ul li {
 
+    box-sizing: border-box;
     cursor: pointer;
+    display: inline-block; /* Lösung A zur horizontalen Anordnung der Listenelemente */
+    /*display: inline; /* Lösung zur horizontalen Anordnung der Listenelemente nicht geeignet, da width-Property nicht wirksam */
+    /*float: left;  /* Lösung B zur horizontalen Anordnung der Listenelemente */
     /*font-size: 1.5rem;*/
     font-weight: bold;
     text-transform: uppercase; /* Präsentation statt Content */
@@ -63,6 +68,8 @@ header nav ul li {
     /*padding: 1.041666667%; /* reine RWD-Lehre: 10px / 960px */
     padding: 0.625rem; /* bewusst Padding hier setzen --> Touchfläche, Rahmenlinien, etc. */
     text-align: center;
+    /*width: 12.5% /* reine RWD-Lehre: 120px / 960px * 100 */
+    width: 8rem;
 }
 
 header nav ul li:hover {
@@ -72,10 +79,12 @@ header nav ul li:hover {
 
 header h1 {
 
-    font-size: 3rem;
-    padding: 3rem 1.5rem;
-    text-align: center;
     /*clear: both; /* für Lösung B zur horizontalen Anordnung der Listenelemente */
+    font-size: 3rem;
+    padding: 0 3rem;
+    position: relative;
+    text-align: left;
+    top: 8rem;
 }
 
 #main section {
@@ -90,10 +99,14 @@ header h1 {
 
 .row .column {
 
-    /*padding: 2rem 1.041666666666667%; /* 10px / 960px * 100 */
-    padding: 2rem 1.5rem;
+    /*box-sizing: border-box; /* Umstellung des Box-Modells --> für Lösung B um Padding herauszurechnen */
+    float: left;
+    padding: 0 1.041666666666667%; /* Lösung A --> reine RWD-Lehre: 10px / 960px * 100 */
     text-align: center;
-    /* Vorsicht bei "Desktop First": width:auto ist nicht identisch zu width: 100% */
+    width: 31.25%; /* Lösung A --> reine RWD-Lehre: 300px / 960px * 100 */
+    /*padding: 0 1.5em; /* Lösung B --> Padding relativ zur Schriftgröße  */
+    /*width: 33.33333%; /* Lösung B */
+    /*width: calc(33.33333% - 3em); /* Lösung C um Padding ohne Box-Modell-Änderung herauszurechnen */
 }
 
 .row .column h2 {
@@ -115,60 +128,51 @@ header h1 {
 	text-align: left;
 }
 
-@media all and (min-width: 30em) {
 
-    header {
+@media all and (max-width: 53em) {
 
-        height: 33.75rem;
-    }
+    .row .column {
 
-	header nav ul li {
-
-        box-sizing: border-box;
-		display: inline-block; /* Lösung A zur horizontalen Anordnung der Listenelemente */
-		/*display: inline; /* Lösung zur horizontalen Anordnung der Listenelemente nicht geeignet, da width-Property nicht wirksam */
-		/*float: left;  /* Lösung B zur horizontalen Anordnung der Listenelemente */
-		width: 25%;
-	}
-
-    header h1 {
-
-        padding: 0 3rem;
-        position: relative;
-        text-align: left;
-        top: 8rem;
+        float: none;
+        /*padding: 2rem 1.041666666666667%; /* 10px / 960px * 100 */
+        padding: 2rem 1.5rem;
+        width: auto; /* Wichtig: Nicht identisch mit width: 100% wenn box-sizing content-box !! */
     }
 
 }
 
-@media all and (min-width: 48em) {
+@media all and (max-width: 48em) {
 
 	header nav ul {
 
-		text-align: right;
+        text-align: center;
 	}
 
 	header nav ul li {
 
-		text-align: center;
-        /*width: 12.5% /* reine RWD-Lehre: 120px / 960px * 100 */
-		width: 8rem;
+        width: 25%;
 	}
 
 }
 
-@media all and (min-width: 53em) {
+@media all and (max-width: 30em) {
 
-	.row .column {
+    header {
 
-		/*box-sizing: border-box; /* Umstellung des Box-Modells --> für Lösung B um Padding herauszurechnen */
-		float: left;
-        padding: 0 1.041666666666667%; /* Lösung A --> reine RWD-Lehre: 10px / 960px * 100 */
-        width: 31.25%; /* Lösung A --> reine RWD-Lehre: 300px / 960px * 100 */
-		/*padding: 0 1.5em; /* Lösung B --> Padding relativ zur Schriftgröße  */
-		/*width: 33.33333%; /* Lösung B */
-		/*width: calc(33.33333% - 3em); /* Lösung C um Padding ohne Box-Modell-Änderung herauszurechnen */
-	}
+        height: auto;
+    }
+
+    header nav ul li {
+
+        width: 100%;
+    }
+
+    header h1 {
+
+        padding: 3rem 1.5rem;
+        text-align: center;
+        top: 0;
+    }
 
 }
 

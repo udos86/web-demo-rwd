@@ -72,10 +72,10 @@ header nav ul li:hover {
 
 header h1 {
 
+    /*clear: both; /* für Lösung B zur horizontalen Anordnung der Listenelemente */
     font-size: 3rem;
     padding: 3rem 1.5rem;
     text-align: center;
-    /*clear: both; /* für Lösung B zur horizontalen Anordnung der Listenelemente */
 }
 
 #main section {
@@ -93,7 +93,6 @@ header h1 {
     /*padding: 2rem 1.041666666666667%; /* 10px / 960px * 100 */
     padding: 2rem 1.5rem;
     text-align: center;
-    /* Vorsicht bei "Desktop First": width:auto ist nicht identisch zu width: 100% */
 }
 
 .row .column h2 {

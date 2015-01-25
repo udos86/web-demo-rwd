@@ -29,6 +29,7 @@ header {
 
     /*background-attachment: fixed; /* Hintergrundbild scrollt nicht mit */
     background: url(../img/bg.jpg) no-repeat;
+    /*background-position: center; /* Optional: Flexible Zentrierung des Hintergrundbilds */
     /*background-size: 100% 100% /* Flexible, aber verzerrte Skalierung des Hintergrundbilds */
     /*background-size: cover; /* Flexible Skalierung des Hintergrundbilds */
 }

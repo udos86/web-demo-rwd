@@ -31,7 +31,7 @@ header {
     background: url(../img/bg.jpg) no-repeat;
     /*background-position: center; /* Optional: Flexible Zentrierung des Hintergrundbilds */
     /*background-size: 100% 100% /* Flexible, aber verzerrte Skalierung des Hintergrundbilds */
-    /*background-size: cover; /* Flexible Skalierung des Hintergrundbilds */
+    background-size: cover; /* Flexible Skalierung des Hintergrundbilds */
     height: 33.75rem;
 }
 
@@ -179,5 +179,8 @@ header h1 {
 
 @media all and (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 192dpi), (min-resolution: 1.5dppx) {
 
-    /* Retina Content */
+    header {
+
+        background: url(../img/bg@2x.jpg) no-repeat;
+    }
 }

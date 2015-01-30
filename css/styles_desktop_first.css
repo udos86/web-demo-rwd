@@ -28,7 +28,8 @@ img {
 header {
 
     /*background-attachment: fixed; /* Hintergrundbild scrollt nicht mit */
-    background: url(../img/bg.jpg) no-repeat;
+    background-image: url(../img/bg.jpg);
+    background-repeat: no-repeat;
     /*background-position: center; /* Optional: Flexible Zentrierung des Hintergrundbilds */
     /*background-size: 100% 100% /* Flexible, aber verzerrte Skalierung des Hintergrundbilds */
     background-size: cover; /* Flexible Skalierung des Hintergrundbilds */
@@ -177,10 +178,10 @@ header h1 {
 
 }
 
-@media all and (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 192dpi), (min-resolution: 1.5dppx) {
+@media all and (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
 
     header {
 
-        background: url(../img/bg@2x.jpg) no-repeat;
+        background-image: url(../img/bg@2x.jpg);
     }
 }

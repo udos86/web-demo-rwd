@@ -32,7 +32,7 @@ header {
     background-repeat: no-repeat;
     /*background-position: center; /* Optional: Flexible Zentrierung des Hintergrundbilds */
     /*background-size: 100% 100% /* Flexible, aber verzerrte Skalierung des Hintergrundbilds */
-    background-size: cover; /* Flexible Skalierung des Hintergrundbilds */
+    /*background-size: cover; /* Flexible Skalierung des Hintergrundbilds */
     height: 33.75rem;
 }
 

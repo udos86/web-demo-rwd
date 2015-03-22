@@ -121,7 +121,7 @@ header h1 {
     header {
 
         height: 33.75rem;
-        background-size: cover;
+        background-size: cover; /* Für Parallaxen-Effekt auskommentieren */
     }
 
 	header nav ul li {
@@ -173,7 +173,7 @@ header h1 {
 	}
 
 }
-
+/* für Parallaxen-Effekt auskommentieren */
 @media all and (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
 
     header {
@@ -181,3 +181,4 @@ header h1 {
         background-image: url(../img/bg@2x.jpg);
     }
 }
+

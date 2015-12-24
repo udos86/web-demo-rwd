@@ -23,6 +23,7 @@ img {
 #main {
 
     box-shadow: 0 -2px 3px -1px rgba(0, 0, 0, 0.25);
+    padding: 0 1em;
 }
 
 header {
@@ -87,7 +88,9 @@ header h1 {
 
 .row {
 
-    overflow: hidden; /* Alternative, wenn overflow:hidden keine Option -> Clearfix-Element */
+    /*overflow: hidden; /* Alternative, wenn overflow:hidden keine Option -> Clearfix-Element */
+    display: flex;
+    flex-direction: column;
 }
 
 .row .column {
@@ -161,12 +164,18 @@ header h1 {
 
 @media all and (min-width: 53em) {
 
+    .row {
+
+        flex-direction: row;
+    }
+
 	.row .column {
 
 		/*box-sizing: border-box; /* Umstellung des Box-Modells --> für Lösung B um Padding herauszurechnen */
-		float: left;
+		/*float: left;/* Standard-Lösung vor Flexbox */
         padding: 0 1.041666666666667%; /* Lösung A --> reine RWD-Lehre: 10px / 960px * 100 */
-        width: 31.25%; /* Lösung A --> reine RWD-Lehre: 300px / 960px * 100 */
+        /*width: 31.25%; /* Lösung A --> reine RWD-Lehre: 300px / 960px * 100 */
+        flex-basis: 31.25%;
 		/*padding: 0 1.5em; /* Lösung B --> Padding relativ zur Schriftgröße  */
 		/*width: 33.33333%; /* Lösung B */
 		/*width: calc(33.33333% - 3em); /* Lösung C um Padding ohne Box-Modell-Änderung herauszurechnen */

@@ -26,22 +26,13 @@ img {
     padding: 0 1em;
 }
 
-header {
-
-    /*background-attachment: fixed; /* Hintergrundbild scrollt nicht mit */
-    background-image: url(../img/bg.jpg);
-    background-repeat: no-repeat;
-    /*background-position: center; /* Optional: Flexible Zentrierung des Hintergrundbilds */
-    /*background-size: 100% 100% /* Flexible, aber verzerrte Skalierung des Hintergrundbilds */
-    /*background-size: cover; /* Flexible Skalierung des Hintergrundbilds */
-}
-
 header nav {
 
     background-color: rgba(255, 255, 255, 0.85); /* Alpha-Kanal für durchscheinenden Hintergrund */
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25); /* Alpha-Kanal für realistischen Schattenwurf */
     /*opacity: 0.75; /* Nicht geeignet für transparenten Hintergrund, da auf alle Kind-Elemente wirksam */
     /*position: fixed; /* kritisch für mobile Browser */
+    position: relative; /* damit box-shadow angezeigt wird */
     width: 100%;
     z-index: 999;
 }
@@ -75,6 +66,7 @@ header nav ul li:hover {
 
 header h1 {
 
+    background-color: #e8e8e8;
     /*clear: both; /* für Lösung B zur horizontalen Anordnung der Listenelemente */
     font-size: 3rem;
     padding: 3rem 1.5rem;
@@ -116,16 +108,11 @@ header h1 {
 .row .column p {
 
     line-height: 1.5;
+    margin: 0 auto; /* Zentrierung des Containers */
 	text-align: left;
 }
 
 @media all and (min-width: 30em) {
-
-    header {
-
-        height: 33.75rem;
-        background-size: cover; /* Für Parallaxen-Effekt auskommentieren */
-    }
 
 	header nav ul li {
 
@@ -136,17 +123,29 @@ header h1 {
 		width: 25%;
 	}
 
+}
+
+@media all and (min-width: 48em) {
+
+    header {
+
+        /*background-attachment: fixed; /* Hintergrundbild scrollt nicht mit */
+        background-image: url(../img/bg.jpg);
+        background-repeat: no-repeat;
+        /*background-position: center; /* Optional: Flexible Zentrierung des Hintergrundbilds */
+        /*background-size: 100% 100% /* Flexible, aber verzerrte Skalierung des Hintergrundbilds */
+        background-size: cover; /* Flexible Skalierung des Hintergrundbilds */
+        height: 33.75rem;
+    }
+
     header h1 {
 
+        background-color: transparent;
         padding: 0 3rem;
         position: relative;
         text-align: left;
         top: 8rem;
     }
-
-}
-
-@media all and (min-width: 48em) {
 
 	header nav ul {
 
@@ -160,9 +159,14 @@ header h1 {
 		width: 8rem;
 	}
 
+    .row .column p {
+
+        max-width: 42em; /* maximale Breite für bessere Lesbarkeit, um zu große Zeilenlänge zu verhindern */
+    }
+
 }
 
-@media all and (min-width: 53em) {
+@media all and (min-width: 64em) {
 
     .row {
 
@@ -172,18 +176,25 @@ header h1 {
 	.row .column {
 
 		/*box-sizing: border-box; /* Umstellung des Box-Modells --> für Lösung B um Padding herauszurechnen */
-		/*float: left;/* Standard-Lösung vor Flexbox */
+        /*flex-basis: 31.25%;/* Flexbox-Alternative zu width */
+        /*float: left;/* Standard-Lösung vor Flexbox */
+
         padding: 0 1.041666666666667%; /* Lösung A --> reine RWD-Lehre: 10px / 960px * 100 */
-        /*width: 31.25%; /* Lösung A --> reine RWD-Lehre: 300px / 960px * 100 */
-        flex-basis: 31.25%;
 		/*padding: 0 1.5em; /* Lösung B --> Padding relativ zur Schriftgröße  */
+
+        width: 31.25%; /* Lösung A --> reine RWD-Lehre: 300px / 960px * 100 */
 		/*width: 33.33333%; /* Lösung B */
 		/*width: calc(33.33333% - 3em); /* Lösung C um Padding ohne Box-Modell-Änderung herauszurechnen */
 	}
 
+    .row .column p {
+
+        max-width: 25em; /* maximale Breite für bessere Lesbarkeit, um zu große Zeilenlänge zu verhindern */
+    }
+
 }
 /* für Parallaxen-Effekt auskommentieren */
-@media all and (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+@media all and (min-width: 48em) and (min-resolution: 144dpi)/*, (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 1.5dppx)*/ {
 
     header {
 

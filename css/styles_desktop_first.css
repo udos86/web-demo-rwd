@@ -33,7 +33,7 @@ header {
     background-repeat: no-repeat;
     /*background-position: center; /* Optional: Flexible Zentrierung des Hintergrundbilds */
     /*background-size: 100% 100% /* Flexible, aber verzerrte Skalierung des Hintergrundbilds */
-    /*background-size: cover; /* Flexible Skalierung des Hintergrundbilds */
+    background-size: cover; /* Flexible Skalierung des Hintergrundbilds */
     height: 33.75rem;
 }
 
@@ -130,11 +130,13 @@ header h1 {
 .row .column p {
 
     line-height: 1.5;
-	text-align: left;
+	margin: 0 auto;
+    max-width: 25em;
+    text-align: left;
 }
 
 
-@media all and (max-width: 53em) {
+@media all and (max-width: 64em) {
 
     .row {
 
@@ -149,9 +151,21 @@ header h1 {
         width: auto; /* Wichtig: Nicht identisch mit width: 100% wenn box-sizing content-box !! */
     }
 
+    .row .column p {
+
+        max-width: 42em; /* maximale Breite für bessere Lesbarkeit, um zu große Zeilenlänge zu verhindern */
+    }
+
 }
 
 @media all and (max-width: 48em) {
+
+    header {
+
+        background-color: #e8e8e8;
+        background-image: none !important; /* ohne !important und ausschließlich max-width in Media Queries zu komplex */
+        height: auto;
+    }
 
 	header nav ul {
 
@@ -162,6 +176,18 @@ header h1 {
 
         width: 25%;
 	}
+
+    header h1 {
+
+        padding: 3rem 1.5rem;
+        text-align: center;
+        top: 0;
+    }
+
+    .row .column p {
+
+        max-width: none;
+    }
 
 }
 
@@ -177,19 +203,14 @@ header h1 {
         width: 100%;
     }
 
-    header h1 {
-
-        padding: 3rem 1.5rem;
-        text-align: center;
-        top: 0;
-    }
-
 }
 
-@media all and (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+@media all and (min-resolution: 144dpi)/*, (min-resolution: 1.5dppx), (-webkit-min-device-pixel-ratio: 1.5)*/  {
 
     header {
 
         background-image: url(../img/bg@2x.jpg);
     }
 }
+
+

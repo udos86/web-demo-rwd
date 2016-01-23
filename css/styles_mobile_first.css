@@ -1,6 +1,6 @@
 ﻿* {
 
-	/*box-sizing: border-box; /* mittlerweile gängige Praxis */
+    /*box-sizing: border-box; /* mittlerweile gängige Praxis */
     color: #333;
     margin: 0;
     padding: 0;
@@ -10,7 +10,7 @@
 
 img {
 
-	max-width: 100%; /* Flexible Images */
+    max-width: 100%; /* Flexible Images */
 }
 
 #page {
@@ -100,8 +100,8 @@ header h1 {
 .row .column img {
 
     border-radius: 50%; /* 100px - Hälfte der Seitenlänge des quadratischen Photos */
-	/*-webkit-filter: grayscale(100%);*/
-	/*filter: grayscale(100%);*/
+    /*-webkit-filter: grayscale(100%);*/
+    /*filter: grayscale(100%);*/
     margin: 2rem 0;
 }
 
@@ -109,19 +109,19 @@ header h1 {
 
     line-height: 1.5;
     margin: 0 auto; /* Zentrierung des Containers */
-	text-align: left;
+    text-align: left;
 }
 
 @media all and (min-width: 30em) {
 
-	header nav ul li {
+    header nav ul li {
 
         box-sizing: border-box;
-		display: inline-block; /* Lösung A zur horizontalen Anordnung der Listenelemente */
-		/*display: inline; /* Lösung zur horizontalen Anordnung der Listenelemente nicht geeignet, da width-Property nicht wirksam */
-		/*float: left;  /* Lösung B zur horizontalen Anordnung der Listenelemente */
-		width: 25%;
-	}
+        display: inline-block; /* Lösung A zur horizontalen Anordnung der Listenelemente */
+        /*display: inline; /* Lösung zur horizontalen Anordnung der Listenelemente nicht geeignet, da width-Property nicht wirksam */
+        /*float: left;  /* Lösung B zur horizontalen Anordnung der Listenelemente */
+        width: 25%;
+    }
 
 }
 
@@ -147,17 +147,17 @@ header h1 {
         top: 8rem;
     }
 
-	header nav ul {
+    header nav ul {
 
-		text-align: right;
-	}
+        text-align: right;
+    }
 
-	header nav ul li {
+    header nav ul li {
 
-		text-align: center;
+        text-align: center;
         /*width: 12.5% /* reine RWD-Lehre: 120px / 960px * 100 */
-		width: 8rem;
-	}
+        width: 8rem;
+    }
 
     .row .column p {
 
@@ -173,19 +173,19 @@ header h1 {
         flex-direction: row;
     }
 
-	.row .column {
+    .row .column {
 
-		/*box-sizing: border-box; /* Umstellung des Box-Modells --> für Lösung B um Padding herauszurechnen */
+        /*box-sizing: border-box; /* Umstellung des Box-Modells --> für Lösung B um Padding herauszurechnen */
         /*flex-basis: 31.25%;/* Flexbox-Alternative zu width */
         /*float: left;/* Standard-Lösung vor Flexbox */
 
         padding: 0 1.041666666666667%; /* Lösung A --> reine RWD-Lehre: 10px / 960px * 100 */
-		/*padding: 0 1.5em; /* Lösung B --> Padding relativ zur Schriftgröße  */
+        /*padding: 0 1.5em; /* Lösung B --> Padding relativ zur Schriftgröße  */
 
         width: 31.25%; /* Lösung A --> reine RWD-Lehre: 300px / 960px * 100 */
-		/*width: 33.33333%; /* Lösung B */
-		/*width: calc(33.33333% - 3em); /* Lösung C um Padding ohne Box-Modell-Änderung herauszurechnen */
-	}
+        /*width: 33.33333%; /* Lösung B */
+        /*width: calc(33.33333% - 3em); /* Lösung C um Padding ohne Box-Modell-Änderung herauszurechnen */
+    }
 
     .row .column p {
 

@@ -1,6 +1,6 @@
 ﻿* {
 
-	/*box-sizing: border-box; /* mittlerweile gängige Praxis */
+    /*box-sizing: border-box; /* mittlerweile gängige Praxis */
     color: #333;
     margin: 0;
     padding: 0;
@@ -10,7 +10,7 @@
 
 img {
 
-	max-width: 100%; /* Flexible Images */
+    max-width: 100%; /* Flexible Images */
 }
 
 #page {
@@ -122,15 +122,15 @@ header h1 {
 .row .column img {
 
     border-radius: 50%; /* 100px - Hälfte der Seitenlänge des quadratischen Photos */
-	/*-webkit-filter: grayscale(100%);*/
-	/*filter: grayscale(100%);*/
+    /*-webkit-filter: grayscale(100%);*/
+    /*filter: grayscale(100%);*/
     margin: 2rem 0;
 }
 
 .row .column p {
 
     line-height: 1.5;
-	margin: 0 auto;
+    margin: 0 auto;
     max-width: 25em;
     text-align: left;
 }
@@ -167,15 +167,15 @@ header h1 {
         height: auto;
     }
 
-	header nav ul {
+    header nav ul {
 
         text-align: center;
-	}
+    }
 
-	header nav ul li {
+    header nav ul li {
 
         width: 25%;
-	}
+    }
 
     header h1 {
 

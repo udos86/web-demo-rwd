@@ -46,7 +46,7 @@ header nav ul li {
     padding: 10px;
     text-align: center;
     text-transform: uppercase; /* Präsentation statt Content */
-    width: 128px;
+    width: 100px;
 }
 
 header nav ul li:hover {

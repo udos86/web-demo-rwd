@@ -72,7 +72,7 @@ header nav ul li {
     padding: 0.625rem; /* bewusst Padding hier setzen --> Touchfläche, Rahmenlinien, etc. */
     text-align: center;
     /*width: 12.5% /* reine RWD-Lehre: 120px / 960px * 100 */
-    width: 8rem;
+    width: 8.75rem;
 }
 
 header nav ul li:hover {

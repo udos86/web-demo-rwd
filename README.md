@@ -1,4 +1,4 @@
 web-demo-rwd
 ========
 
-Sample project for workshop "Mobile Web Development I - Responsive Web Design"
+Sample project for workshop "Responsive Web Design"

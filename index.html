@@ -72,6 +72,14 @@
 
     </div>
 
+    <script> 
+        // Service Worker feature detection 
+        if (navigator.serviceWorker) {
+            // Service Worker registration
+            navigator.serviceWorker.register('./sw.js');
+        }
+    </script>
+
 </body>
 
 </html>

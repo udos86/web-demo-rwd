@@ -20,12 +20,6 @@ img {
     height: 2000px; /* NUR ZU TESTZWECKEN FÜR PARALLAX-SCROLLING */
 }
 
-#main {
-
-    box-shadow: 0 -2px 3px -1px rgba(0, 0, 0, 0.25);
-    padding: 0 1em;
-}
-
 header {
 
     /*background-attachment: fixed; /* Hintergrundbild scrollt nicht mit */
@@ -90,7 +84,13 @@ header h1 {
     top: 8rem;
 }
 
-#main section {
+main {
+
+    box-shadow: 0 -2px 3px -1px rgba(0, 0, 0, 0.25);
+    padding: 0 1em;
+}
+
+main section {
 
     padding: 3rem 0;
 }
